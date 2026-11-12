@@ -113,7 +113,6 @@
 
 /* questions */
 .v2 .faq.faq2{display:block;padding:130px var(--pad) 0}
-.faq2 h2{font-size:clamp(26px,2.3vw,32px);margin-bottom:34px}
 .faq2 summary{font-family:var(--sans);font-size:16px;font-weight:500;letter-spacing:0;padding:19px 0}
 .faq2 summary i{border:0;width:18px;height:18px}
 .faq2 details p{max-width:680px}
@@ -154,3 +153,112 @@
   .v2 .foot{margin-top:80px}
   .dash .tiles b{font-size:22px}
 }
+
+/* ---------- accent: one green, used with black ---------- */
+.v2{--green:#0c8a3e;--green-soft:#e2f2e7;--kick:var(--green)}
+.v2 ::selection{background:var(--green-soft)}
+.tab::after{background:var(--green)}
+.tab.on i{border-color:var(--green);color:var(--green)}
+.v2 .btn.dark:hover{background:var(--green);border-color:var(--green)}
+.v2 .plan .tag.k{background:var(--green);border-color:var(--green)}
+.v2 .plan li svg,.v2 .demo .pts li svg,.phase li svg,.v2 .ok{color:var(--green)}
+.v2 .tag:not(.plain):not(.k)::before{background:var(--green);opacity:1}
+.v2 .node.live{border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+.h2-vis .floaty{border-top-color:var(--green)}
+.dash .chart i.on,.v2 .fa-cost .bars i.on,.v2 .fa-rule .r3 i{background:var(--green)}
+.v2 .status::before{background:var(--green)}
+.v2 .mg a:hover i,.v2 .mg a:focus-visible i{border-color:var(--green);color:var(--green)}
+.v2 .fld input:focus,.v2 .fld select:focus,.v2 .fld textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+.v2 .link:hover,.v2 .ft-cols a:hover{color:var(--green)}
+.chip::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:7px;vertical-align:1px}
+.v2 .social a:hover{background:var(--green);border-color:var(--green);color:#fff}
+
+/* ---------- one heading pattern: label, title, supporting line ---------- */
+.v2{--t-h3:22px}
+.shead{max-width:600px}
+.shead h2,.stext h2{font-size:var(--t-h2);line-height:1.08;margin:0}
+.shead .lead,.stext .lead{font-size:17px;line-height:1.5;color:var(--muted);margin:16px 0 0;max-width:520px}
+.v2 .feats>.shead,.v2 .price>.shead{margin:0 var(--pad)}
+.tablist,.vgrid,.v2 .fgridc,.qa{margin-top:44px}
+.v2 .plans{margin-top:44px}
+.pgrid{margin-top:58px}
+.v2 .fc h3,.phase h3{font-family:var(--serif);font-size:var(--t-h3);font-weight:400;letter-spacing:-.03em;line-height:1.14}
+.phase h3{margin:18px 0 14px}
+.v2 .fc p,.phase li,.pane>p{font-size:15px;line-height:1.5}
+.v2 .demo h2{font-size:var(--t-h2)}
+.v2 .demo .lead{font-size:17px}
+.faq2 h2{font-size:var(--t-h2);margin-bottom:0}
+.v2 .faq.faq2 .qa details:first-child{border-top:1px solid var(--line)}
+
+/* ---------- customer cards: words first, the photo arrives on hover ---------- */
+.voice{background:var(--beige);color:var(--ink);cursor:pointer;outline:0;transition:color .45s}
+.voice img{opacity:0;transform:scale(1.05);transition:opacity .55s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.voice::after{opacity:0;transition:opacity .55s}
+.voice .co{text-shadow:none}
+.voice q{font-family:var(--serif);font-size:clamp(20px,1.75vw,25px);line-height:1.16;letter-spacing:-.03em;transition:font-size .3s}
+.voice figcaption span{opacity:.7}
+.peek{position:absolute;left:16px;top:15px;z-index:1;display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:500;color:var(--muted);transition:opacity .3s}
+.peek i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--green-soft)}
+.voice:hover,.voice:focus-visible,.voice.show{color:#fff}
+.voice:hover img,.voice:focus-visible img,.voice.show img{opacity:1;transform:none}
+.voice:hover::after,.voice:focus-visible::after,.voice.show::after{opacity:1}
+.voice:hover .peek,.voice:focus-visible .peek,.voice.show .peek{opacity:0}
+.voice:focus-visible{box-shadow:0 0 0 2px var(--green)}
+
+/* ---------- footer: the scene in black ---------- */
+.v2 .foot{background:#0a0a0b;border-top:0}
+.v2 .foot-card{box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.v2 .foot-scene{-webkit-mask-image:linear-gradient(transparent,#000 26%);mask-image:linear-gradient(transparent,#000 26%)}
+
+/* ---------- everything below the hero sits on the frame ----------
+   Blocks run from the left line to the right line and never past them.
+   Text keeps a small gutter inside the lines. The hero is the one exception. */
+.v2{--gut:clamp(16px,1.7vw,24px);--pad:calc(var(--edge) + var(--gut))}
+.logos2,.walk,.split,.voices,.phases,.v2 .faq.faq2{padding-left:var(--edge);padding-right:var(--edge)}
+.shead,.stext{padding-left:var(--gut);padding-right:var(--gut)}
+.v2 .feats>.shead,.v2 .price>.shead{margin:0 var(--edge)}
+
+.logos2{padding-bottom:0}
+.lgrid{row-gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lg{height:112px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lg:nth-child(5n){border-right:0}
+.lg:nth-last-child(-n+5){border-bottom:0}
+.walk{border-top:0}
+
+.tab{padding-left:var(--gut)}
+.pane{padding-top:0}
+.pane>p{padding:34px var(--gut) 0 0}
+.tablist{border-top:1px solid var(--line)}
+.bp{border-radius:0}
+
+.v2 .fgridc,.v2 .plans{margin-left:var(--edge);margin-right:var(--edge);border-left:0;border-right:0}
+.v2 .fc,.v2 .plan{padding-left:var(--gut);padding-right:var(--gut)}
+.vgrid{gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.voice{border-radius:0}
+.pgrid{border-bottom:1px solid var(--line)}
+.phase{padding:0 var(--gut) 34px;border-left:1px solid var(--line)}
+.phase:first-child{border-left:0}
+.faq2 summary{padding-left:var(--gut);padding-right:var(--gut)}
+.faq2 details p{padding-left:var(--gut)}
+.v2 .demo{margin-left:var(--edge);margin-right:var(--edge);border-left:0;border-right:0}
+.v2 .demo .txt,.v2 .demo form{padding-left:var(--gut);padding-right:var(--gut)}
+.v2 .foot{margin-left:var(--edge);margin-right:var(--edge);padding-top:0}
+.v2 .foot-card{margin:0;border-radius:0;box-shadow:none;border-bottom:1px solid rgba(255,255,255,.08)}
+.v2 .foot-scene{margin-top:0}
+.hero2::after{left:var(--edge);right:var(--edge)}
+
+@media (max-width:960px){
+  .v2{--gut:18px;--pad:18px}
+  .lg{height:84px}
+  .lg,.lg:nth-child(5n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .lg:nth-child(2n){border-right:0}
+  .lg:nth-child(n+9){border-bottom:0}
+  .tab{padding-left:var(--gut)}
+  .pane>p{padding:0 var(--gut)}
+  .stext{padding-top:0}
+  .v2 .fgridc,.v2 .plans{margin-left:0;margin-right:0}
+  .v2 .fc,.v2 .fc.big,.v2 .plan{padding-left:var(--gut);padding-right:var(--gut)}
+  .phase,.phase:first-child{border-left:0;padding:0 var(--gut) 30px}
+  .v2 .demo .txt,.v2 .demo form{padding-left:var(--gut);padding-right:var(--gut)}
+}
+.v2 .price h2,.v2 .feats .shead h2{margin:0}
