@@ -262,3 +262,72 @@
   .v2 .demo .txt,.v2 .demo form{padding-left:var(--gut);padding-right:var(--gut)}
 }
 .v2 .price h2,.v2 .feats .shead h2{margin:0}
+
+/* ---------- more green ---------- */
+.v2{--green-bright:#34c471;--green-mid:#bfe3cb}
+/* calls to action are green, and turn black on hover */
+.v2 .btn.dark,.v2 .mini.k{background:var(--green);border-color:var(--green);color:#fff}
+.v2 .btn.dark:hover{background:var(--ink);border-color:var(--ink)}
+.v2 .btn:not(.dark):hover{border-color:var(--green);color:var(--green);background:#fff}
+body[data-nav=dark] .v2 .nav .btn.dark,.v2 .nav .btn.dark{background:var(--green);border-color:var(--green);color:#fff}
+/* brand mark, headline and labels */
+.v2 .logo b::after,.v2 .side .brand b{background:var(--green-bright)}
+.v2 .side .brand b{background:var(--green)}
+.hero2 h1 em{font-style:normal;color:var(--green)}
+.kick::before{content:"";display:inline-block;width:6px;height:6px;background:var(--green);margin-right:8px;vertical-align:1px}
+.v2 .nl:hover,.v2 .has-menu.open>.nl{color:var(--green)}
+.v2 .nav::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:calc(var(--sp,0)*100%);background:var(--green)}
+.lg svg{color:var(--green)}
+/* product screens */
+.v2 .side a.on{background:var(--green-soft);color:var(--green)}
+.v2 .tabs b{border-bottom-color:var(--green)}
+.v2 .node small svg{color:var(--green)}
+.v2 .tag.plain{background:var(--green-soft);border-color:transparent;color:var(--green)}
+.v2 .tag.k{background:var(--green);border-color:var(--green)}
+.v2 .row .n{border-color:var(--green-mid);color:var(--green);background:var(--green-soft)}
+.v2 .row .n.no{border-color:var(--line);color:#b3261e;background:#fff}
+.v2 .avs span i:first-child{background:var(--green)}
+.v2 .box .trk i{background:var(--green)}
+.draft li svg{color:var(--green)}
+.draft .who b{background:var(--green)}
+.dash .tiles b{color:var(--green)}
+.dash .chart i,.v2 .fa-cost .bars i{background:var(--green-mid)}
+.v2 .rr .chg,.v2 .fa-rule em{background:var(--green-soft);color:var(--green)}
+.v2 .fa-cost b{color:var(--green)}
+.v2 .fa-alert svg{color:var(--green)}
+.v2 .fa-quote .q{border-left:2px solid var(--green);padding-left:12px}
+.v2 .fc .mini:hover{background:var(--green);border-color:var(--green);color:#fff}
+/* tabs, timeline, pricing, questions */
+.tab.on i{background:var(--green-soft)}
+.chip{background:var(--green-soft);border-color:var(--green-mid);color:var(--green)}
+.phase:first-child,.phase{border-top:0}
+.pgrid{border-top-color:var(--green-mid)}
+.v2 .plan.pop{background:var(--green-soft);box-shadow:inset 0 2px 0 var(--green)}
+.v2 .plan .amt b{color:var(--ink)}
+.v2 .plan:not(.pop) .btn.dark{background:var(--ink);border-color:var(--ink)}
+.v2 .plan:not(.pop) .btn.dark:hover{background:var(--green);border-color:var(--green)}
+.faq2 summary i::before,.faq2 summary i::after{background:var(--green)}
+.faq2 details[open] summary,.faq2 summary:hover{color:var(--green)}
+.v2 .demo form .btn{background:var(--green);border-color:var(--green)}
+/* customer cards pick up a green cast when the photo shows */
+.voice::after{background:linear-gradient(0deg,rgba(4,38,19,.92) 0%,rgba(4,38,19,.4) 48%,transparent 74%)}
+.voice{box-shadow:inset 0 0 0 0 var(--green);transition:color .45s,box-shadow .3s}
+.voice:hover,.voice:focus-visible,.voice.show{box-shadow:inset 0 -3px 0 0 var(--green-bright)}
+
+/* ---------- footer: white on solid black, full width, no image ---------- */
+.v2 .foot{margin:130px 0 0;padding:clamp(48px,6vw,84px) var(--pad) 34px;background:#0a0a0b;color:#fff;border-top:0;overflow:visible}
+.v2 .foot-card{margin:0;padding:0;background:none;box-shadow:none;border:0;border-radius:0;color:#fff}
+.v2 .foot .logo{color:#fff}
+.v2 .foot .logo b::after{background:var(--green)}
+.v2 .ft-brand p{color:rgba(255,255,255,.62)}
+.v2 .foot .status{border-color:rgba(255,255,255,.18);color:#fff}
+.v2 .foot .status::before{background:var(--green-bright)}
+.v2 .ft-top{border-bottom-color:rgba(255,255,255,.14)}
+.v2 .ft-cols h4{color:#fff}
+.v2 .ft-cols li{color:rgba(255,255,255,.62)}
+.v2 .ft-cols a:hover{color:var(--green-bright)}
+.v2 .ft-bot{color:rgba(255,255,255,.55)}
+.v2 .social a{border-color:rgba(255,255,255,.2);color:#fff}
+.v2 .social a:hover{background:var(--green);border-color:var(--green)}
+@media (max-width:960px){.v2 .foot{margin-top:80px;padding:44px var(--pad) 28px}}
+.v2 .tag.k,.v2 .tag.k.plain,.v2 .plan .tag.k{background:var(--green);border-color:var(--green);color:#fff}
