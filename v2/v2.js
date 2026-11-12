@@ -39,10 +39,11 @@
   $$('.voice').forEach(v => v.addEventListener('click', () => v.classList.toggle('show')));
 
   /* ---------- small scroll touches ---------- */
-  const vis = $('.h2-vis'), scene = $('.foot-scene');
+  const vis = $('.h2-vis'), scene = $('.foot-scene'), nav = $('.nav');
   function frame() {
     const vh = innerHeight;
     document.body.toggleAttribute('data-top', scrollY < 24);
+    nav.style.setProperty('--sp', clamp(scrollY / (document.documentElement.scrollHeight - vh)).toFixed(4));
     if (vis && innerWidth > 960) vis.style.setProperty('--sy', (clamp(scrollY / vh) * -36).toFixed(1) + 'px');
     if (scene) { const r = scene.getBoundingClientRect(); scene.style.setProperty('--f', clamp((vh - r.top) / r.height).toFixed(3)); }
   }
