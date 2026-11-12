@@ -351,3 +351,8 @@ body.v2 .nav::before{border-bottom-color:rgba(19,19,18,.14)}
     linear-gradient(rgba(19,19,18,.06) 1px,transparent 1px) 0 var(--navh)/100% calc(100vw/6),
     linear-gradient(90deg,rgba(19,19,18,.06) 1px,transparent 1px) 0 0/calc(100%/6) 100%}
 }
+
+/* hero banner in place of the label */
+.hero2 .pill{margin-bottom:26px;background:#fff;transition:border-color .2s}
+.hero2 .pill:hover{border-color:var(--green)}
+@media (max-width:960px){.hero2 .pill{font-size:12px;margin-bottom:20px}}
