@@ -356,3 +356,99 @@ body.v2 .nav::before{border-bottom-color:rgba(19,19,18,.14)}
 .hero2 .pill{margin-bottom:26px;background:#fff;transition:border-color .2s}
 .hero2 .pill:hover{border-color:var(--green)}
 @media (max-width:960px){.hero2 .pill{font-size:12px;margin-bottom:20px}}
+
+/* ================= theme switch ================= */
+.v2{--card:#fff;--gridc:rgba(19,19,18,.06);--on-green:#fff}
+.mode{width:38px;height:38px;border:1px solid var(--line);border-radius:var(--r);display:grid;place-items:center;font-size:17px;color:var(--ink);transition:border-color .2s,color .2s}
+.mode:hover{border-color:var(--green);color:var(--green)}
+.mode .sun{display:none}
+html[data-mode=dark] .mode .sun{display:block}
+html[data-mode=dark] .mode .moon{display:none}
+.mode-fade *,.mode-fade *::before,.mode-fade *::after{transition:background-color .4s,color .4s,border-color .4s,box-shadow .4s,fill .4s,stroke .4s!important}
+/* the hero grid takes its line colour from a variable so both themes share one rule */
+.hero2::before{background:
+    linear-gradient(var(--gridc) 1px,transparent 1px) 0 var(--navh)/100% calc((100vw - 2*var(--edge))/16),
+    linear-gradient(90deg,var(--gridc) 1px,transparent 1px) 0 0/calc(100%/16) 100%}
+@media (max-width:960px){
+  .hero2::before{background:
+    linear-gradient(var(--gridc) 1px,transparent 1px) 0 var(--navh)/100% calc(100vw/6),
+    linear-gradient(90deg,var(--gridc) 1px,transparent 1px) 0 0/calc(100%/6) 100%}
+  .mode{width:40px;height:40px}
+}
+.v2 .btn.dark,.v2 .mini.k,.v2 .tag.k,.v2 .tag.k.plain,.v2 .plan .tag.k,.v2 .demo form .btn{color:var(--on-green)}
+
+/* ================= dark theme ================= */
+html[data-mode=dark]{color-scheme:dark;background:#0b0c0d}
+html[data-mode=dark] .v2{
+  --bg:#0b0c0d;--card:#191b1e;--beige:#121315;--soft:#15171a;
+  --ink:#f1efea;--muted:rgba(238,235,228,.68);--faint:rgba(238,235,228,.44);--line:rgba(255,255,255,.1);
+  --green:#3ccf7a;--green-bright:#3ccf7a;--green-soft:rgba(60,207,122,.13);--green-mid:rgba(60,207,122,.36);
+  --gridc:rgba(255,255,255,.055);--on-green:#06140c;--kick:var(--green);
+  background:var(--bg);color:var(--ink)}
+/* header and menus */
+html[data-mode=dark] .v2 .nav::before{background:rgba(11,12,13,.82);border-bottom-color:rgba(255,255,255,.13)}
+html[data-mode=dark] body.v2[data-top] .nav::before{background:transparent;border-color:rgba(255,255,255,.13)}
+html[data-mode=dark] .v2 .mega-in{background:var(--card);box-shadow:0 0 0 1px rgba(255,255,255,.06),0 24px 60px rgba(0,0,0,.6)}
+html[data-mode=dark] .v2 .mg a i{background:transparent}
+html[data-mode=dark] .v2 .mg-card{background:#202327}
+html[data-mode=dark] .v2 .mg-card:hover{background:#262a2e}
+html[data-mode=dark] .v2 .frame i{background:rgba(255,255,255,.1)}
+/* buttons */
+html[data-mode=dark] .v2 .btn{background:transparent;border-color:rgba(255,255,255,.2);color:var(--ink)}
+html[data-mode=dark] .v2 .btn.dark,html[data-mode=dark] .v2 .nav .btn.dark,html[data-mode=dark] .v2 .demo form .btn{background:var(--green);border-color:var(--green);color:var(--on-green)}
+html[data-mode=dark] .v2 .btn.dark:hover{background:var(--ink);border-color:var(--ink);color:#0b0c0d}
+html[data-mode=dark] .v2 .btn:not(.dark):hover{background:transparent;border-color:var(--green);color:var(--green)}
+html[data-mode=dark] .v2 .plan:not(.pop) .btn.dark{background:var(--ink);border-color:var(--ink);color:#0b0c0d}
+html[data-mode=dark] .v2 .plan:not(.pop) .btn.dark:hover{background:var(--green);border-color:var(--green);color:var(--on-green)}
+html[data-mode=dark] .v2 .mini{border-color:rgba(255,255,255,.16);color:var(--ink)}
+html[data-mode=dark] .v2 .mini.k,html[data-mode=dark] .v2 .fc .mini:hover{background:var(--green);border-color:var(--green);color:var(--on-green)}
+/* hero and the product window */
+html[data-mode=dark] .v2 .pill{background:var(--card)}
+html[data-mode=dark] .v2 .pill b{background:var(--ink);color:#0b0c0d}
+html[data-mode=dark] .v2 .win{background:var(--card);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 34px 90px rgba(0,0,0,.6)}
+html[data-mode=dark] .v2 .win-bar i{background:rgba(255,255,255,.16)}
+html[data-mode=dark] .v2 .side a,html[data-mode=dark] .v2 .tag{color:var(--muted)}
+html[data-mode=dark] .v2 .side a.on{background:var(--green-soft);color:var(--green)}
+html[data-mode=dark] .v2 .side .dot{background:var(--ink)}
+html[data-mode=dark] .v2 .side .dot.o{background:rgba(255,255,255,.26)}
+html[data-mode=dark] .v2 .tag.plain{color:var(--green)}
+html[data-mode=dark] .v2 .tag.k,html[data-mode=dark] .v2 .tag.k.plain{color:var(--on-green)}
+html[data-mode=dark] .v2 .avs span i{border-color:var(--card);color:#0b0c0d}
+html[data-mode=dark] .v2 .avs span i:nth-child(2){background:#9aa3ad}
+html[data-mode=dark] .v2 .avs span i:nth-child(3){background:#dfe3e8}
+html[data-mode=dark] .v2 .node{background:#1f2226}
+html[data-mode=dark] .v2 .node:not(:nth-child(3n))::after{background:rgba(255,255,255,.22)}
+html[data-mode=dark] .v2 .node small svg{color:var(--green)}
+html[data-mode=dark] .v2 .floaty{background:#22262a;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 26px 70px rgba(0,0,0,.65)}
+/* panels inside the page */
+html[data-mode=dark] .v2 .logos2 p,html[data-mode=dark] .v2 .tab{color:var(--faint)}
+html[data-mode=dark] .v2 .tab.on,html[data-mode=dark] .v2 .tab:hover{color:var(--ink)}
+html[data-mode=dark] .v2 .tab i{background:var(--card)}
+html[data-mode=dark] .v2 .tab.on i{background:var(--green-soft)}
+html[data-mode=dark] .v2 .bp .panel,html[data-mode=dark] .v2 .fart>div{background:var(--card);box-shadow:0 0 0 1px rgba(255,255,255,.07),0 18px 50px rgba(0,0,0,.5)}
+html[data-mode=dark] .v2 .row .n.no{background:transparent;border-color:rgba(255,255,255,.14);color:#ff8479}
+html[data-mode=dark] .v2 .no{color:#ff8479}
+html[data-mode=dark] .v2 .fa-rule .r3 i::after{background:#0b0c0d}
+html[data-mode=dark] .v2 .chip{background:var(--green-soft);border-color:var(--green-mid);color:var(--green)}
+html[data-mode=dark] .v2 .voice{background:var(--beige);color:var(--ink)}
+html[data-mode=dark] .v2 .voice:hover,html[data-mode=dark] .v2 .voice:focus-visible,html[data-mode=dark] .v2 .voice.show{color:#fff}
+html[data-mode=dark] .v2 .plan li,html[data-mode=dark] .v2 .demo .pts li{color:var(--muted)}
+html[data-mode=dark] .v2 .plan.pop{background:var(--green-soft)}
+/* form */
+html[data-mode=dark] .v2 .fld input,html[data-mode=dark] .v2 .fld select,html[data-mode=dark] .v2 .fld textarea{background:#0f1012;border-color:rgba(255,255,255,.14);color:var(--ink)}
+html[data-mode=dark] .v2 .fld input::placeholder,html[data-mode=dark] .v2 .fld textarea::placeholder{color:var(--faint)}
+html[data-mode=dark] .v2 .fld input:focus,html[data-mode=dark] .v2 .fld select:focus,html[data-mode=dark] .v2 .fld textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+html[data-mode=dark] .v2 .form-status.ok{background:rgba(60,207,122,.14);color:#8fe3b1}
+html[data-mode=dark] .v2 .form-status.err{background:rgba(255,132,121,.13);color:#ffb0a8}
+/* footer keeps its black, with a line so it does not merge into the page */
+html[data-mode=dark] .v2 .foot{background:#060607;border-top:1px solid rgba(255,255,255,.1)}
+@media (max-width:960px){
+  html[data-mode=dark] .v2 .nav-links{background:var(--bg);color:var(--ink)}
+  html[data-mode=dark] body.v2.menu-open .nav::before,html[data-mode=dark] body.v2.menu-open[data-top] .nav::before{background:var(--bg);border-color:rgba(255,255,255,.13)}
+  html[data-mode=dark] body.v2.menu-open .nav{color:var(--ink)}
+  html[data-mode=dark] body.v2.menu-open .logo b::after{background:var(--green)}
+}
+/* the browser draws its own controls (scrollbars, select menus) to match the chosen theme, not the device setting */
+html{color-scheme:light}
+/* the pricing section's own top rule ran the full window width; the timeline above already closes on the frame */
+.v2 .price{border-top:0}

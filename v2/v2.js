@@ -16,6 +16,21 @@
   }
   const go = top => { if (lenis) { lenis.start(); lenis.scrollTo(top, { duration: 1.3, force: true }); } else scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' }); };
 
+  /* ---------- light and dark theme ---------- */
+  const root = document.documentElement, modeBtn = $('.mode');
+  const setMode = (m, save) => {
+    root.dataset.mode = m;
+    modeBtn.setAttribute('aria-pressed', m === 'dark');
+    modeBtn.setAttribute('aria-label', m === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    if (save) { try { localStorage.setItem('tessel-mode', m); } catch (e) {} }
+  };
+  setMode(root.dataset.mode === 'dark' ? 'dark' : 'light');
+  modeBtn.addEventListener('click', () => {
+    root.classList.add('mode-fade');                          // colours ease across instead of snapping
+    setMode(root.dataset.mode === 'dark' ? 'light' : 'dark', true);
+    setTimeout(() => root.classList.remove('mode-fade'), 500);
+  });
+
   /* ---------- reveal on view ---------- */
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -5% 0px' });
   $$('.rv').forEach(el => io.observe(el));
