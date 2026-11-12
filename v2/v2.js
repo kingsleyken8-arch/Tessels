@@ -35,6 +35,9 @@
   tabSec.addEventListener('mouseleave', () => { held = false; tabSec.classList.remove('held'); cycle(); });
   new IntersectionObserver(es => { seen = es[0].isIntersecting; tabSec.classList.toggle('seen', seen); if (seen) show(cur); cycle(); }, { threshold: .3 }).observe(tabSec);
 
+  // touch screens have no hover, so a tap shows or hides the photo
+  $$('.voice').forEach(v => v.addEventListener('click', () => v.classList.toggle('show')));
+
   /* ---------- small scroll touches ---------- */
   const vis = $('.h2-vis'), scene = $('.foot-scene');
   function frame() {
