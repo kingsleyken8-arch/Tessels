@@ -331,3 +331,23 @@ body[data-nav=dark] .v2 .nav .btn.dark,.v2 .nav .btn.dark{background:var(--green
 .v2 .social a:hover{background:var(--green);border-color:var(--green)}
 @media (max-width:960px){.v2 .foot{margin-top:80px;padding:44px var(--pad) 28px}}
 .v2 .tag.k,.v2 .tag.k.plain,.v2 .plan .tag.k{background:var(--green);border-color:var(--green);color:#fff}
+
+/* ---------- hero: line grid behind the copy, and a rule under the header ---------- */
+.v2{--navh:62px}
+/* the grid is built on the frame: sixteen columns between the two lines, so its
+   outer verticals are the frame lines themselves, and its first row is the header rule */
+.hero2::before{content:"";position:absolute;z-index:0;top:0;bottom:0;left:var(--edge);right:var(--edge);pointer-events:none;
+  background:
+    linear-gradient(rgba(19,19,18,.06) 1px,transparent 1px) 0 var(--navh)/100% calc((100vw - 2*var(--edge))/16),
+    linear-gradient(90deg,rgba(19,19,18,.06) 1px,transparent 1px) 0 0/calc(100%/16) 100%;
+  -webkit-mask-image:linear-gradient(#000 0%,#000 34%,transparent 88%);mask-image:linear-gradient(#000 0%,#000 34%,transparent 88%)}
+.hero2>*{position:relative;z-index:1}
+/* the header keeps its bottom line from the first moment, running the full width over the frame */
+body.v2[data-top] .nav::before{background:transparent;border-color:rgba(19,19,18,.14);-webkit-backdrop-filter:none;backdrop-filter:none}
+body.v2 .nav::before{border-bottom-color:rgba(19,19,18,.14)}
+@media (max-width:960px){
+  .v2{--navh:64px}
+  .hero2::before{background:
+    linear-gradient(rgba(19,19,18,.06) 1px,transparent 1px) 0 var(--navh)/100% calc(100vw/6),
+    linear-gradient(90deg,rgba(19,19,18,.06) 1px,transparent 1px) 0 0/calc(100%/6) 100%}
+}
